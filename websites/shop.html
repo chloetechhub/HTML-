@@ -51,15 +51,18 @@
 
     <div class="footer">
         <p>Copyright © 2025 Flower. All Rights Reserved</p>
-        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-square-instagram" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
     </div>
 
     <script>
-        var links = document.getElementById('links');
-        function showMenu(){ links.style.top = '0'; }
-        function hideMenu(){ links.style.top = '-240px'; }
+        // Guarded navigation menu controls
+        (function(){
+            var links = document.getElementById('links');
+            window.showMenu = function(){ if (links) links.style.top = '0'; };
+            window.hideMenu = function(){ if (links) links.style.top = '-240px'; };
+        })();
     </script>
 </body>
 </html>
