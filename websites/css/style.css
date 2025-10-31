@@ -4,6 +4,7 @@
 
 body{
     background-image: url(../images/backround.jpg);
+    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -253,6 +254,8 @@ body{
 
 
 .footer{
+  background-color: black;
+    color: #efeded;
     text-align: center;
 }
 
